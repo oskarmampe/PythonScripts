@@ -1,0 +1,4 @@
+weather_client/weather_py3
+__pycache__
+*.*~
+*.pyc
