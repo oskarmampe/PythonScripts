@@ -1,0 +1,179 @@
+ 
+bool_one = False or not True and True
+
+#NAO not and or its like bodmas
+#this one is equal to:
+#False or False and True
+#False or False
+#False
+
+#False and False is equal to False
+#False and True is equal to False
+#True and True is equal to True
+
+#False or False is equal to False
+#False or True is equal to True
+#True or True is equal to True
+
+
+
+bool_two =False and not True or True 
+
+"""
+NAO
+False and False or True
+False or True
+True
+"""
+
+
+bool_three = True and not (False or False)
+
+"""
+NAO
+True and not (False)
+True and True
+True
+"""
+
+
+bool_four = not not True or False and not True
+
+"""
+NAO
+not (False) or False and False
+True or False and False
+True or False
+True
+
+"""
+
+
+bool_five = False or not (True and True)
+
+
+"""
+NAO
+False or not (True)
+False or False
+False
+"""
+#print those out to the console
+print bool_one
+
+print bool_two
+
+print bool_three
+
+print bool_four
+
+print bool_five
+
+
+
+#defining a function which works simmilarly to a variable as the function is equal to whatever is below, so whatever is entered between
+#the parentheses will be run using the code below, which in this case simply prints the string. However the function also has to equal to 
+#something, and in this case it will return none, as nothing is stored in the function itself
+#so if you print this function without anything in, it will return '\None\'
+
+def printme( str ):
+
+   "This prints a passed string into this function"
+
+   print str
+
+   return
+
+
+
+printme("fosanfosanf");
+
+
+
+"""
+if however a variable has been declared before, and you set the function equal to that, then its going to work with the variable, and set the function equal to true or false. so if you print black_knight now when answer is equal to tis but a scratch, you get that function equal to true
+"""
+
+answer = "'Tis but a scratch!"
+
+
+
+def black_knight():
+
+    if answer == "'Tis but a scratch!":
+
+        return True
+
+    else:
+        return False     
+
+
+
+
+def french_soldier():
+
+    if answer == "Go away, or I shall taunt you a second time!":
+
+        return True
+
+    else:
+        return False
+
+
+print black_knight()
+
+print french_soldier()
+
+
+
+#if statements only work with one line so it would seem, and the first line is the only one that activates.
+def the_flying_circus():
+
+    if 23 > 3 or 124 < 12:
+    
+    return True
+
+    elif 23 > 3 and 124 > 12:
+
+        print "This might be also true"
+
+    else:
+
+        print "All of this was false"
+            
+
+
+print the_flying_circus()
+
+
+
+
+
+#PygLatin Translator- it uses an if statement tcheck if the string value is greater than 0 and then check if its alpha aka letters only
+#Then word variable is equal to the original variable but with smaller case letters
+"""
+then the program finds the first letter of the original variable and that is set equal to the first variable
+then we need to find the new word by adding word and the first letter and then pyg variable
+since we dont want the first letter we set new word equal to its original value but from its 2nd letter to the total amount of strings in that variable
+and then we print to see the string
+"""
+pyg = 'ay'
+
+
+original = raw_input('Enter a word:')
+
+if len(original) > 0 and original.isalpha():
+
+    word = original.lower()
+
+    first = original[0]
+
+    new_word = word + first + pyg
+
+    new_word = new_word[1:len(new_word)]
+
+    print new_word
+
+else:
+
+    print 'empty'
